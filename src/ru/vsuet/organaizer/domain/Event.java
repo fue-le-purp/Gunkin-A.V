@@ -1,50 +1,38 @@
 package ru.vsuet.organaizer.domain;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Event {
-    private Long id;
-    private String name;
-    private LocalDate createdAt;
-    private EventType eventType;
-    private List<Event> eventsList;
+public abstract class Event {
 
-    public Event(Long id, EventType type, String name) {
+    protected Long id;
+    protected String name;
+    protected EventType type;
+
+    public Event(Long id, String name, EventType type) {
         this.id = id;
         this.name = name;
-        this.eventType = type;
-        this.createdAt = LocalDate.now();
-        this.eventsList = new ArrayList<>();
+        this.type = type;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public LocalDate getCreatedAt() {
-        return createdAt;
+    public EventType getType() {
+        return type;
     }
 
     @Override
     public String toString() {
-        return "BirthDay{" +
+        return "Event{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", createdAt=" + createdAt +
+                ", type=" + type +
                 '}';
     }
 }
