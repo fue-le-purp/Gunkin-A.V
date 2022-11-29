@@ -1,7 +1,8 @@
 package ru.vsuet.organaizer.repository;
 
 import ru.vsuet.organaizer.domain.Event;
-import ru.vsuet.organaizer.domain.Item;
+import ru.vsuet.organaizer.domain.EventType;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +26,10 @@ class Storage {
     }
 
     private void init() {
-        Event event1 = new Event(1L, "event 1");
-        Item item1 = new Item(1L, "Item 1");
-        event1.addItem(item1);
+        Event event1 = new Event(1L, "День рождения Ивана Ивановича", EventType.BirthDay);
 
-        Event event2 = new Event(2L, "event 2");
+
+        Event event2 = new Event(2L, "Встреча выпускников", EventType.Meeting);
 
         events.add(event1);
         events.add(event2);

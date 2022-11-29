@@ -3,7 +3,7 @@ package ru.vsuet.organaizer.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Event {
+public class Event {
 
     protected Long id;
     protected String name;
