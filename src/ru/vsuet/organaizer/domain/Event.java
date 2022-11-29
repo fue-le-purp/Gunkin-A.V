@@ -1,6 +1,7 @@
 package ru.vsuet.organaizer.domain;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Event {
@@ -9,10 +10,13 @@ public class Event {
     protected String name;
     protected EventType type;
 
-    public Event(Long id, String name, EventType type) {
+    protected Date EventDate;
+
+    public Event(Long id, String name, EventType type,Date date) {
         this.id = id;
         this.name = name;
         this.type = type;
+        this.EventDate = date;
     }
 
     public Long getId() {
@@ -27,12 +31,17 @@ public class Event {
         return type;
     }
 
+    public Date getEventDate() {
+        return EventDate;
+    }
+
     @Override
     public String toString() {
         return "Event{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", type=" + type +
+                ", EventDate=" + EventDate +
                 '}';
     }
 }

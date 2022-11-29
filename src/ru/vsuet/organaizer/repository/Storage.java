@@ -26,10 +26,10 @@ class Storage {
     }
 
     private void init() {
-        Event event1 = new Event(1L, "День рождения Ивана Ивановича", EventType.BirthDay);
+        Event event1 = new Event(1L, "День рождения Ивана Ивановича", EventType.BirthDay,);
 
 
-        Event event2 = new Event(2L, "Встреча выпускников", EventType.Meeting);
+        Event event2 = new Event(2L, "Встреча выпускников", EventType.Meeting,);
 
         events.add(event1);
         events.add(event2);

@@ -1,5 +1,6 @@
 package ru.vsuet.organaizer.view;
 
+import ru.vsuet.organaizer.domain.Event;
 import ru.vsuet.organaizer.service.Service;
 
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class ComponentFabric {
                 switch (componentType) {
                     case MENU -> component = new MenuComponent();
                     case LIST -> component = new ObjectsListComponent<>(service);
-                    case SINGLE -> component = new SingleComponent();
+                    case SINGLE -> component = new SingleComponent((Service< Event >) service);
 
                     default -> component = null;
                 }
