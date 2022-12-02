@@ -1,13 +1,16 @@
 package ru.vsuet.organaizer.view;
 
+import ru.vsuet.organaizer.domain.Event;
 import ru.vsuet.organaizer.service.Service;
+
+import java.awt.*;
 
 public abstract class AbstractComponent<T> implements Component {
 
     protected ComponentType type;
-    protected final Service<T> service;
+    protected final Service<Event> service;
 
-    public AbstractComponent(ComponentType type, Service<T> service) {
+    public AbstractComponent(ComponentType type, Service<Event> service) {
         this.type = type;
         this.service = service;
     }

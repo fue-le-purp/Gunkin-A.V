@@ -14,10 +14,10 @@ public class MenuComponent extends AbstractComponent<Void> {
     }
 
     private void drawMenu() {
-        System.out.println("**** MENU *****");
+        System.out.println("**** МЕНЮ *****");
         Arrays.stream(ComponentType.values())
                 .forEach(t -> System.out.println(t.getType() + "" + t.getComment()));
-        System.out.println("9 - Exit");
+        System.out.println("9 - выход");
         System.out.println("---------------");
     }
 }

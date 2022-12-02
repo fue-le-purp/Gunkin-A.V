@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public enum ComponentType {
 
-    MENU(0, " - menu"),
-    LIST(1, " - objects list"),
-    SINGLE(2, " - get object by id"),
-    TEST(5, " - some test");
+    MENU(0, " - меню"),
+    LIST(1, " - лист объектов"),
+    SINGLE(2, " - получить объект по ID"),
+    REMOVE(3, "- удалить оъект по ID");
+
+
 
     private final int type;
     private final String comment;

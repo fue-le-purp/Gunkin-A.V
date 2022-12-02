@@ -1,22 +1,22 @@
 package ru.vsuet.organaizer.domain;
 
-import java.util.ArrayList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-public class Event {
+public abstract class Event {
 
     protected Long id;
     protected String name;
     protected EventType type;
 
-    protected Date EventDate;
+    protected Date date;
 
-    public Event(Long id, String name, EventType type,Date date) {
+    public Event(Long id, String name, EventType type, String date) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.EventDate = date;
+        this.date = parse(date);
     }
 
     public Long getId() {
@@ -31,8 +31,8 @@ public class Event {
         return type;
     }
 
-    public Date getEventDate() {
-        return EventDate;
+    public Date getDate() {
+        return date;
     }
 
     @Override
@@ -41,7 +41,18 @@ public class Event {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", type=" + type +
-                ", EventDate=" + EventDate +
+                ", date=" + date +
                 '}';
+    }
+
+    private Date parse(String date){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+
+        try {
+            return formatter.parse(date);
+        } catch (ParseException e) {
+            throw new IllegalArgumentException("Я не могу выполнить этот запрос"+e.getMessage());
+        }
     }
 }

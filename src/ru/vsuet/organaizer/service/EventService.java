@@ -1,6 +1,7 @@
 package ru.vsuet.organaizer.service;
 
 import ru.vsuet.organaizer.domain.Event;
+import ru.vsuet.organaizer.domain.Meeting;
 import ru.vsuet.organaizer.repository.InMemoryEventRepository;
 import ru.vsuet.organaizer.repository.Repository;
 import java.util.List;
@@ -20,5 +21,13 @@ public class EventService implements Service<Event> {
     public List<Event> getAll() {
         return repository.list();
     }
+
+    @Override
+    public void removeById(Long id) {
+        Event target = new Meeting(id,null,"1999-12-01");
+        repository.remove(target);
+
+    }
+
 
 }

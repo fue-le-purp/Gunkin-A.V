@@ -9,4 +9,6 @@ public interface Service<T> {
     Event getById(Long id);
 
     List<T> getAll();
+
+    void removeById(Long id);
 }

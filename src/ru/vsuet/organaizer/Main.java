@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Service<Event> service = new EventService();
         ComponentFabric fabric = new ComponentFabric();
-        System.out.println("------- 0 - menu -----------");
+        System.out.println("------- 0 - меню -----------");
         Scanner scanner = new Scanner(System.in);
         while (true) {
             int command = scanner.nextInt();

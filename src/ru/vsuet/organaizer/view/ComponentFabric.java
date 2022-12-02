@@ -18,11 +18,14 @@ public class ComponentFabric {
         try {
             ComponentType componentType = ComponentType.fromType(type);
             return components.computeIfAbsent(componentType, (ct) -> {
-                Component component;
+                Component component = null;
+                Service<Event> Event;
                 switch (componentType) {
                     case MENU -> component = new MenuComponent();
-                    case LIST -> component = new ObjectsListComponent<>(service);
+                    case LIST -> component = new ObjectsListComponent<>((Service<Event>) service);
                     case SINGLE -> component = new SingleComponent((Service< Event >) service);
+                    case REMOVE -> component = new RemoveObjectById((Service< Event >) service);
+
 
                     default -> component = null;
                 }

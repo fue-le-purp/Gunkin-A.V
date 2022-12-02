@@ -1,8 +1,9 @@
 package ru.vsuet.organaizer.domain;
 
 public class BirthDay extends Event {
-    public BirthDay(Long id, String name) {
-        super(id, name, EventType.BirthDay);
+    public BirthDay(Long id, String name, String date) {
+
+        super(id, name, EventType.BirthDay, date);
     }
 
     @Override
@@ -11,6 +12,8 @@ public class BirthDay extends Event {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", type=" + type +
+                ", date=" + date +
                 '}';
     }
 }
+

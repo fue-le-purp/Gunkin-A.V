@@ -29,7 +29,7 @@ public class InMemoryEventRepository implements Repository<Event> {
     @Override
     public void remove(Event target) {
         events.removeIf
-                (c -> target.getId().equals(c.getId()));
+                (e -> target.getId().equals(e.getId()));
     }
 
     @Override
