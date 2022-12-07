@@ -52,7 +52,7 @@ public abstract class Event {
         try {
             return formatter.parse(date);
         } catch (ParseException e) {
-            throw new IllegalArgumentException("Я не могу выполнить этот запрос"+e.getMessage());
+            throw new IllegalArgumentException("Я не могу выполнить этот запрос "+e.getMessage());
         }
     }
 }

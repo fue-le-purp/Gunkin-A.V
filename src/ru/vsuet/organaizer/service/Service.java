@@ -11,4 +11,6 @@ public interface Service<T> {
     List<T> getAll();
 
     void removeById(Long id);
+
+    void addEvent(Event source);
 }

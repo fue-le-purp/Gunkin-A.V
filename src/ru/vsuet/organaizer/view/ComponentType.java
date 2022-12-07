@@ -7,7 +7,9 @@ public enum ComponentType {
     MENU(0, " - меню"),
     LIST(1, " - лист объектов"),
     SINGLE(2, " - получить объект по ID"),
-    REMOVE(3, "- удалить оъект по ID");
+    REMOVE(3, " - удалить оъект по ID"),
+    ADDBIRTHDAY(4, " - добавить день рождения"),
+    ADDMEETING (5," - добавить встречу");
 
 
 

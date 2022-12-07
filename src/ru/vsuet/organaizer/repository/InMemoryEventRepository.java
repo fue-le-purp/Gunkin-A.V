@@ -21,10 +21,6 @@ public class InMemoryEventRepository implements Repository<Event> {
                 .orElse(null);
     }
 
-    @Override
-    public void add(Event source) {
-        events.add(source);
-    }
 
     @Override
     public void remove(Event target) {
@@ -36,4 +32,12 @@ public class InMemoryEventRepository implements Repository<Event> {
     public List<Event> list() {
         return new ArrayList<>(events);
     }
-}
+
+    @Override
+    public void add(Event source) {
+        events.add(source);
+    }
+
+
+
+    }

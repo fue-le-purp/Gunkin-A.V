@@ -2,7 +2,6 @@ package ru.vsuet.organaizer.view;
 
 
 import ru.vsuet.organaizer.domain.Event;
-import ru.vsuet.organaizer.service.EventService;
 import ru.vsuet.organaizer.service.Service;
 
 import java.util.Scanner;
@@ -21,6 +20,8 @@ public class SingleComponent extends AbstractComponent<Void> {
         long id = scanner.nextLong();
         Event event = service.getById(id);
         System.out.print(event);
+
+
 
 
     }

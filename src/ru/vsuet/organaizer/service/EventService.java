@@ -24,10 +24,12 @@ public class EventService implements Service<Event> {
 
     @Override
     public void removeById(Long id) {
-        Event target = new Meeting(id,null,"1999-12-01");
+        Event target = new Meeting(id, null, "1999-12-01");
         repository.remove(target);
+    }
+    @Override
+    public void addEvent(Event source) {
+        repository.add(source);
 
     }
-
-
 }

@@ -25,6 +25,8 @@ public class ComponentFabric {
                     case LIST -> component = new ObjectsListComponent<>((Service<Event>) service);
                     case SINGLE -> component = new SingleComponent((Service< Event >) service);
                     case REMOVE -> component = new RemoveObjectById((Service< Event >) service);
+                    case ADDBIRTHDAY -> component = new AddBirthday<>(service);
+                    case ADDMEETING -> component = new AddMeeting<>(service);
 
 
                     default -> component = null;

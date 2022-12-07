@@ -3,7 +3,7 @@ package ru.vsuet.organaizer.view;
 import ru.vsuet.organaizer.domain.Event;
 import ru.vsuet.organaizer.service.Service;
 
-public class ObjectsListComponent<T> extends AbstractComponent<T> {
+public class ObjectsListComponent<T> extends AbstractComponent<Event> {
 
     public ObjectsListComponent(Service<Event> service) {
         super(ComponentType.LIST, service);
