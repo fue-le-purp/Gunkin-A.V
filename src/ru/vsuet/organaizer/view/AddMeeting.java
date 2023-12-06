@@ -20,7 +20,7 @@ public class AddMeeting<T> extends AbstractComponent<T> {
         String name = scanner.nextLine();
         name = scanner.nextLine();
         Scanner in = new Scanner(System.in);
-        System.out.print("Веедите дату: ");
+        System.out.print("Веедите дату в данном формате(гггг-мм-дд): ");
         String date = in.nextLine();
 
         Event event = new Meeting(id, name , date );
